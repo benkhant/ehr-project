@@ -15,17 +15,16 @@ This system performs:
 
 ### Medication Reconciliation
 
-* Aggregates medication data from multiple sources (EHR, Primary Care, Pharmacy)
-* Uses:
+Aggregates medication data from multiple sources (EHR, Primary Care, Pharmacy) 
+and selects the most trustworthy record based on:
+* Source reliability scoring
+* Recency of records
+* Conflicting data across systems
 
-  * Source reliability scoring
-  * Recency of records
-* Selects the most trustworthy medication record
-* Provides:
-
-  * Confidence score
-  * AI-generated clinical reasoning
-  * Recommended follow-up actions
+Provides:
+* Confidence score
+* AI-generated clinical reasoning
+* Recommended follow-up actions
 
 ---
 
@@ -53,15 +52,15 @@ This system performs:
 
 ### AI Integration
 
-* Uses an LLM API to:
-
-  * Generate clinical reasoning for reconciliation decisions
-  * Summarize detected data quality issues
-* Designed with:
-
-  * Structured prompts including clinical context
-  * Graceful fallback if API is unavailable
-  * Cost-awareness (optional caching-ready design)
+* Used OpenAI API to generate clinical reasoning and summaries
+* Prompt includes structured clinical context:
+  * patient data
+  * detected issues
+* Designed for:
+  * accuracy
+  * concise explanations
+  * clinician readability
+* Includes fallback logic when API is unavailable
 
 ---
 
@@ -127,14 +126,14 @@ ehr-project/
 
 ## Deployment
 
-- Backend deployed on Render
-- Frontend deployed on Vercel
+* Backend deployed on Render
+* Frontend deployed on Vercel
 
 Production environment variables:
-- OPENAI_API_KEY
-- APP_API_KEY
-- REACT_APP_API_BASE_URL
-- REACT_APP_API_KEY
+* OPENAI_API_KEY
+* APP_API_KEY
+* REACT_APP_API_BASE_URL
+* REACT_APP_API_KEY
 
 ---
 
@@ -144,10 +143,10 @@ Frontend: https://ehr-project-six.vercel.app
 Backend: https://ehr-project.onrender.com
 
 Features:
-- AI-powered medication reconciliation
-- Data quality validation with scoring
-- Clinician decision simulation (approve/reject)
-- Real-time API integration with OpenAI
+* AI-powered medication reconciliation
+* Data quality validation with scoring
+* Clinician decision simulation (approve/reject)
+* Real-time API integration with OpenAI
 
 ---
 

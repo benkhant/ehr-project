@@ -62,7 +62,8 @@ const [validateInput, setValidateInput] = useState(`{
     const data = await res.json();
     setReconcileResult(data);
     setDecision("");
-  } catch {
+  } catch (err) {
+    console.error("API error:", err);
     alert("Invalid JSON input");
   }
 };
@@ -83,7 +84,8 @@ const callValidate = async () => {
     const data = await res.json();
     setValidateResult(data);
     setDecision("");
-  } catch {
+  } catch (err) {
+    console.error("API error:", err);
     alert("Invalid JSON input");
   }
 };
