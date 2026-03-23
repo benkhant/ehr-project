@@ -125,6 +125,19 @@ ehr-project/
 
 ---
 
+## Deployment
+
+- Backend deployed on Render
+- Frontend deployed on Vercel
+
+Production environment variables:
+- OPENAI_API_KEY
+- APP_API_KEY
+- REACT_APP_API_BASE_URL
+- REACT_APP_API_KEY
+
+---
+
 ## Setup Instructions
 
 ### 1. Clone the repository
