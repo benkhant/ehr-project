@@ -1,13 +1,8 @@
 # EHR Reconciliation & Data Quality Dashboard
 
-A full-stack clinical decision support tool that combines rule-based logic and AI to improve electronic health record (EHR) reliability.
+A full-stack application that reconciles conflicting medication records and evaluates clinical data quality using a hybrid rule-based + LLM-assisted approach.
 
-This system performs:
-
-* Medication reconciliation across multiple sources
-* Data quality assessment with scoring and issue detection
-* AI-generated clinical reasoning and summaries
-* A clinician-facing dashboard for review and decision-making
+The system combines deterministic rule-based logic for decision-making with LLM-generated explanations for interpretability, delivered through a FastAPI backend and a React frontend dashboard.
 
 ---
 
@@ -50,7 +45,18 @@ Provides:
 
 ---
 
-### AI Integration
+## LLM Choice
+
+This project uses the OpenAI API to generate:
+
+* Clinical reasoning for reconciliation decisions
+* Human-readable summaries for data quality findings
+
+I chose OpenAI because it provides strong structured reasoning capabilities, integrates easily with a Python backend, and produces concise, clinically interpretable outputs when guided with structured prompts.
+
+---
+
+## AI Integration
 
 * Used OpenAI API to generate clinical reasoning and summaries
 * Prompt includes structured clinical context:
@@ -64,7 +70,7 @@ Provides:
 
 ---
 
-### Frontend Dashboard
+## Frontend Dashboard
 
 * Simple, clinician-friendly UI
 * Features:
@@ -142,12 +148,6 @@ Production environment variables:
 Frontend: https://ehr-project-six.vercel.app  
 Backend: https://ehr-project.onrender.com
 
-Features:
-* AI-powered medication reconciliation
-* Data quality validation with scoring
-* Clinician decision simulation (approve/reject)
-* Real-time API integration with OpenAI
-
 ---
 
 ## Setup Instructions
@@ -174,6 +174,7 @@ Create a `.env` file:
 
 ```
 OPENAI_API_KEY=your_api_key_here
+APP_API_KEY=your_app_key_here
 ```
 
 Run backend:
@@ -195,6 +196,18 @@ http://127.0.0.1:8000/docs
 ```
 cd frontend
 npm install
+```
+
+Create a `.env.local` file in the `frontend/` folder:
+
+```
+REACT_APP_API_BASE_URL=http://127.0.0.1:8000
+REACT_APP_API_KEY=your_app_key_here
+```
+
+Then start the app:
+
+```
 npm start
 ```
 
@@ -273,6 +286,15 @@ http://localhost:3000
 
 ---
 
+## Design Trade-offs
+
+* Used rule-based logic for core decision-making and LLMs only for explanation, ensuring deterministic and testable outputs
+* Did not include a database to prioritize core functionality and keep the system simple, as persistence was optional
+* Implemented a simple API key mechanism instead of full authentication to balance security with development speed
+* Used heuristic scoring rather than trained calibration models to maintain interpretability and simplicity
+
+---
+
 ## Limitations
 
 * No persistent database (decisions not stored)
@@ -288,8 +310,19 @@ http://localhost:3000
 * Expand clinical validation rules (drug interactions, contraindications)
 * Improve UI/UX with charts and visualizations
 * Add authentication and user roles
-* Implement caching for AI responses
 * Containerize the stack with Docker
+
+---
+
+## Estimated Time Spent
+
+Approximately 8-12 hours total, including:
+
+- Backend development and API design
+- AI integration and prompt design
+- Frontend dashboard implementation
+- Testing and debugging
+- Deployment setup (Vercel + Render)
 
 ---
 
