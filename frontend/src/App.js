@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 
 function App() {
-const APP_API_KEY = "demo-key-123"; // Must match backend .env
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+const APP_API_KEY = process.env.REACT_APP_API_KEY;
 
 const [reconcileInput, setReconcileInput] = useState(`{
   "sources": [
@@ -49,7 +50,7 @@ const [validateInput, setValidateInput] = useState(`{
   try {
     JSON.parse(reconcileInput); // validate JSON
 
-    const res = await fetch("http://127.0.0.1:8000/api/reconcile/medication", {
+    const res = await fetch(`${API_BASE_URL}/api/reconcile/medication`, {
       method: "POST",
       headers: { 
         "Content-Type": "application/json",
@@ -70,7 +71,7 @@ const callValidate = async () => {
   try {
     JSON.parse(validateInput); // validate JSON
 
-    const res = await fetch("http://127.0.0.1:8000/api/validate/data-quality", {
+    const res = await fetch(`${API_BASE_URL}/api/validate/data-quality`, {
       method: "POST",
       headers: { 
         "Content-Type": "application/json",
