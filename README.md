@@ -264,6 +264,7 @@ http://localhost:3000
 * Improve UI/UX with charts and visualizations
 * Add authentication and user roles
 * Implement caching for AI responses
+* Containerize the stack with Docker
 
 ---
 
