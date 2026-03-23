@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends
 from app.services.validation_service import validate_data_quality
-from app.security import verify_api_key
+from backend.app.auth import verify_api_key
 
 router = APIRouter()
 
