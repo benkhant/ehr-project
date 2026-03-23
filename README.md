@@ -221,6 +221,8 @@ http://localhost:3000
 
 ## Example Inputs
 
+Example inputs are also available in the `/examples` folder.
+
 ### Medication Reconciliation
 
 ```json
