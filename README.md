@@ -79,6 +79,12 @@ This system performs:
 
 ---
 
+## API Protection
+
+The backend uses a simple API key check for protected endpoints. Clients must send the `x-api-key` header, and the expected key is configured through the `APP_API_KEY` environment variable.
+
+---
+
 ## Tech Stack
 
 **Backend**

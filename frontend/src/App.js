@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
 function App() {
+const APP_API_KEY = "demo-key-123"; // Must match backend .env
+
 const [reconcileInput, setReconcileInput] = useState(`{
   "sources": [
     {
@@ -49,7 +51,10 @@ const [validateInput, setValidateInput] = useState(`{
 
     const res = await fetch("http://127.0.0.1:8000/api/reconcile/medication", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { 
+        "Content-Type": "application/json",
+        "x-api-key": APP_API_KEY
+      },
       body: reconcileInput,
     });
 
@@ -67,7 +72,10 @@ const callValidate = async () => {
 
     const res = await fetch("http://127.0.0.1:8000/api/validate/data-quality", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { 
+        "Content-Type": "application/json",
+        "x-api-key": APP_API_KEY
+      },
       body: validateInput,
     });
 
