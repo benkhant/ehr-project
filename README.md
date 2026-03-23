@@ -138,6 +138,19 @@ Production environment variables:
 
 ---
 
+## Live Demo
+
+Frontend: https://ehr-project-six.vercel.app  
+Backend: https://ehr-project.onrender.com
+
+Features:
+- AI-powered medication reconciliation
+- Data quality validation with scoring
+- Clinician decision simulation (approve/reject)
+- Real-time API integration with OpenAI
+
+---
+
 ## Setup Instructions
 
 ### 1. Clone the repository
