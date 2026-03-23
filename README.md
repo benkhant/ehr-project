@@ -279,6 +279,14 @@ Example inputs are also available in the `/examples` folder.
 
 ---
 
+## Test Data
+
+Sample inputs are included above for demonstration. The system is designed to handle structured EHR-like data, and additional datasets can be integrated as needed.
+
+The design was informed by the provided EHR sample data, though simplified examples are included here for clarity and ease of testing.
+
+---
+
 ## Design Decisions
 
 * Combined **rule-based logic + AI reasoning** for reliability and interpretability
@@ -299,19 +307,20 @@ Example inputs are also available in the `/examples` folder.
 
 ## Limitations
 
-* No persistent database (decisions not stored)
-* Simplified clinical logic (not production-grade)
-* Limited validation rules and edge case handling
-* API usage depends on available credits
+* No persistent database (clinician decisions and history are not stored)
+* Simplified clinical logic and validation rules (not production-grade)
+* Limited coverage of edge cases and complex clinical scenarios
+* Dependence on external API availability and usage credits
+* Confidence scoring is heuristic-based and not calibrated using real clinical data
 
 ---
 
 ## Future Improvements
 
-* Add database for audit trail and decision tracking
-* Expand clinical validation rules (drug interactions, contraindications)
-* Improve UI/UX with charts and visualizations
-* Add authentication and user roles
+* Add a database for audit trails and clinician decision history
+* Expand clinical validation rules (e.g., drug interactions, contraindications)
+* Improve UI/UX with charts and richer visualizations
+* Add full user authentication and role-based access control
 * Containerize the stack with Docker
 
 ---
