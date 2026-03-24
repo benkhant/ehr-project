@@ -110,23 +110,23 @@ The backend uses a simple API key check for protected endpoints. Clients must se
 
 ## Project Structure
 
-```
-ehr-project/
-│
-├── backend/
-│   ├── app/
-│   │   ├── routes/
-│   │   ├── services/
-│   │   └── main.py
-│   ├── tests/
-│   └── requirements.txt
-│
-├── frontend/
-│   ├── src/
-│   └── package.json
-│
-└── README.md
-```
+The project is organized into backend and frontend components:
+
+### Backend
+- app/routes → API endpoints
+- app/services → business logic (reconciliation, validation, LLM)
+- app/main.py → FastAPI entry point
+- app/auth.py → API key authentication
+
+### Frontend
+- public/ → static assets
+- src/App.js → main dashboard UI
+- src/index.js → entry point
+- package.json → dependencies and scripts
+
+### Additional
+- examples/ → sample input JSON files for testing
+- ARCHITECTURE.md → design decisions and system architecture
 
 ---
 
