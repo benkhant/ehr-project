@@ -113,20 +113,20 @@ The backend uses a simple API key check for protected endpoints. Clients must se
 The project is organized into backend and frontend components:
 
 ### Backend
-- app/routes → API endpoints
-- app/services → business logic (reconciliation, validation, LLM)
-- app/main.py → FastAPI entry point
-- app/auth.py → API key authentication
+* app/routes → API endpoints
+* app/services → business logic (reconciliation, validation, LLM)
+* app/main.py → FastAPI entry point
+* app/auth.py → API key authentication
 
 ### Frontend
-- public/ → static assets
-- src/App.js → main dashboard UI
-- src/index.js → entry point
-- package.json → dependencies and scripts
+* public/ → static assets
+* src/App.js → main dashboard UI
+* src/index.js → entry point
+* package.json → dependencies and scripts
 
 ### Additional
-- examples/ → sample input JSON files for testing
-- ARCHITECTURE.md → design decisions and system architecture
+* examples/ → sample input JSON files for testing
+* ARCHITECTURE.md → design decisions and system architecture
 
 ---
 
@@ -329,11 +329,11 @@ The design was informed by the provided EHR sample data, though simplified examp
 
 Approximately 8-12 hours total, including:
 
-- Backend development and API design
-- AI integration and prompt design
-- Frontend dashboard implementation
-- Testing and debugging
-- Deployment setup (Vercel + Render)
+* Backend development and API design
+* AI integration and prompt design
+* Frontend dashboard implementation
+* Testing and debugging
+* Deployment setup (Vercel + Render)
 
 ---
 
