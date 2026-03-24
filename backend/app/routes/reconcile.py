@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends
 from app.services.reconciliation_service import reconcile_medication
-from backend.app.auth import verify_api_key
+from app.auth import verify_api_key
 
 router = APIRouter()
 
