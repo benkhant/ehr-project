@@ -327,7 +327,7 @@ The design was informed by the provided EHR sample data, though simplified examp
 
 ## Estimated Time Spent
 
-Approximately 8-12 hours total, including:
+Approximately 10-12 hours total, including:
 
 * Backend development and API design
 * AI integration and prompt design
