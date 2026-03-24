@@ -5,7 +5,6 @@ const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 const APP_API_KEY = process.env.REACT_APP_API_KEY;
 
 const [reconcileInput, setReconcileInput] = useState(`{
-  {
   "patient_context": {
     "age": 67,
     "conditions": ["Type 2 Diabetes", "Hypertension"],
@@ -31,7 +30,7 @@ const [reconcileInput, setReconcileInput] = useState(`{
       "source_reliability": "medium"
     }
   ]
-  }`);
+}`);
   const [reconcileResult, setReconcileResult] = useState(null);
   const [decision, setDecision] = useState("");
 
