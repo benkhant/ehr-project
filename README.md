@@ -52,7 +52,7 @@ This project uses the OpenAI API to generate:
 * Clinical reasoning for reconciliation decisions
 * Human-readable summaries for data quality findings
 
-I chose OpenAI because it provides strong structured reasoning capabilities, integrates easily with a Python backend, and produces concise, clinically interpretable outputs when guided with structured prompts.
+I chose OpenAI because it provides strong structured reasoning capabilities, integrates easily with a Python backend, and produces clear, human-readable explanations when guided with structured prompts.
 
 ---
 
